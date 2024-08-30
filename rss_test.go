@@ -86,3 +86,23 @@ func TestWriteRSS(t *testing.T) {
 	// cleanup
 	os.Remove("testout.rss")
 }
+
+func TestAddItem(t *testing.T) {
+	item := Item{
+		Title:       "baz",
+		Link:        "http://example.com/baz",
+		Description: "Lorem ipsum dolor sit amet",
+		PubDate:     "Sun, 09 Aug 2015 16:05:14 +0200",
+	}
+
+	comprss.AddItem(item)
+
+	expectedItem := Item{
+		Title:       "baz",
+		Link:        "http://example.com/baz",
+		Description: "Lorem ipsum dolor sit amet",
+		PubDate:     "Sun, 09 Aug 2015 16:05:14 +0200",
+	}
+
+	assert.Equal(t, expectedItem, comprss.Item[len(comprss.Item)-1])
+}

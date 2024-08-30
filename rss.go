@@ -36,3 +36,7 @@ func (rss Rss) WriteRSS(w io.Writer) error {
 	enc.Indent("", "  ")
 	return enc.Encode(rss)
 }
+
+func (rss *Rss) AddItem(item Item) {
+	rss.Item = append(rss.Item, item)
+}
