@@ -33,9 +33,9 @@ var comprss = Rss{
 }
 
 func TestParseRSS(t *testing.T) {
-	file, err := os.Open("result.xml")
+	file, err := os.Open("test.rss")
 	if err != nil {
-		t.Errorf("Failed to open result.xml: %v", err)
+		t.Errorf("Failed to open test.rss: %v", err)
 	}
 
 	rss, err := ParseRSS(file)
@@ -62,9 +62,9 @@ func TestWriteRSS(t *testing.T) {
 
 	// now test equality
 
-	file1, err := os.Open("result.xml")
+	file1, err := os.Open("test.rss")
 	if err != nil {
-		t.Errorf("Failed to open result.xml: %v", err)
+		t.Errorf("Failed to open test.rss: %v", err)
 	}
 	file2, err := os.Open("testout.rss")
 	if err != nil {
