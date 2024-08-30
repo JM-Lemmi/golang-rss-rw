@@ -1,18 +1,18 @@
 <rss version="2.0">
-  <channel>github.com/russross/blackfriday
-    <description>My super website</description>
-    <link>http://mywebsite.com</link>
-    <title>Mywebsite</title>
+  <channel>
+    <title>Testfeed</title>
+    <description>This is a Testfeed for golang-rss-rw</description>
+    <link>http://example.com/test.rss</link>
     <item>
       <title>foo</title>
-      <link>http://mywebsite.com/foo</link>
+      <link>http://example.com/foo</link>
       <description>lorem ipsum</description>
       <pubDate>Sun, 09 Aug 2015 16:05:14 +0200</pubDate>
     </item>
     <item>
-      <title>foo2</title>
-      <link>http://mywebsite.com/foo2</link>
-      <description>lorem ipsum2</description>
+      <title>bar</title>
+      <link>http://example.com/bar</link>
+      <description>dolor sit amet</description>
       <pubDate>Sun, 09 Aug 2015 16:05:14 +0200</pubDate>
     </item>
   </channel>
